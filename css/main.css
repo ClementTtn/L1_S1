@@ -1,0 +1,128 @@
+html{
+    font-family: "Calibri";
+    font-size: 100%;
+    padding : 0rem;
+}
+
+body{
+    padding : 0;
+    margin : 0rem;
+    font-size : 1rem;
+    background-color: white;
+    color : black ;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+}
+
+header{
+    text-align: center;
+    font-size: 120%;
+}
+
+nav{
+    padding : 0;
+    margin : 0;
+    text-align: center;
+    background-color: darkred;
+}
+
+nav a{
+    display: inline-block ;
+    color : #FFFFFF ;
+    text-decoration : none ; 
+    font-size : 200% ; 
+    margin: 0rem;
+    padding : 1rem ;
+    padding-inline: 6rem;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    background-color : white ;
+    color : black ;
+    transition: 0.75s;
+}
+
+nav ul{
+    padding : 0 ; margin : 0 ;
+    list-style-type: none ;
+}
+
+
+.form_prof{
+    margin: 1rem;
+    border-style: solid;
+    text-align: center;
+}
+
+.choix{
+    font-size: 100%;
+    margin-left: 0.5rem;
+}
+
+.button{
+    background-color: darkred;
+    border: none;
+    color: white;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.sortieBD table{
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid black;
+    padding-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.sortieBD td{
+    border: 1px solid black;
+}
+
+.sortieBD th{
+    color: white;
+    background-color: darkred;
+    border: 1px solid black;
+}
+
+.sortieBD tr{
+    background-color: white;
+    border: 1px solid black;
+}
+
+.form_etudiant{
+    margin: 1rem;
+    border-style: solid;
+    text-align: center;
+}
+
+h2{
+    margin: 1rem;
+}
+
+p{
+    margin: 1rem;
+}
+
+.photo{
+    padding-bottom: 1rem;
+}
+
+.photo_last{
+    padding-bottom: 0rem;
+}
+
+footer {     
+    position: fixed;
+    text-align : center;      
+    color: white; 
+    background-color: darkred;     
+    bottom: 0;     
+    width: 100%;       
+}

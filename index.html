@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Clément TUTIN</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/comportements.js"></script>   
+    </head>
+    
+    <body>
+        <header>
+            <h1>Projet - Introduction aux Systèmes Informatiques</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Exercice 1</a>
+                    <a href="ex2.html">Exercice 2</a>
+                    <a href="cr.html">Compte-rendu</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="form_prof">
+
+            <h2>Base de données professeur</h2>
+
+            <form id="pourBDprof" method="POST">
+                <select class="choix" name="requeteChoisie">
+                    <option name="texteRequete" value="SELECT * FROM plats ORDER BY tarif"> Afficher les produits par prix croissant.</option>
+                    <option name="texteRequete" value="SELECT * FROM plats ORDER BY tarif DESC"> Afficher les produits par prix décroissant.</option>
+                    <option name="texteRequete" value="SELECT AVG (tarif) FROM plats"> Afficher le prix moyen des produits disponibles.</option>
+                    <option name="texteRequete" value="SELECT * FROM plats ORDER BY nom"> Afficher les produits par ordre alphabétique.</option> 
+                    <option name="texteRequete" value="SELECT * FROM plats ORDER BY nom DESC"> Afficher les produits par ordre alphabétique inversé.</option>
+                    <option name="texteRequete" value="SELECT * FROM plats WHERE nom LIKE 'P%'">Afficher les produits dont le nom commence par la lettre P.</option>
+                    <option name="texteRequete" value="SELECT * FROM plats ORDER BY type"> Afficher les produits en fonction du type.</option>
+                </select>
+
+                <div>
+                <input class="button" type="submit" value="Afficher">
+                </div>
+
+            </form>
+
+            <h3>Affichage des résultats</h3>
+
+            <div class="sortieBD">
+                <table></table>
+            </div>
+
+            <div class ="messageErreur">
+                <p></p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Clément TUTIN - Licence informatique</p>
+            <a href="https://www.univ-larochelle.fr/" style="color:white">La Rochelle Université</a>
+            <p>2020 - 2021</p>
+        </footer>
+        
+    </body>
+</html>

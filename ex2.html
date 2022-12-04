@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Clément TUTIN</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/comportements.js"></script>   
+    </head>
+    
+    <body>
+        <header>
+            <h1>Projet - Introduction aux Systèmes Informatiques</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Exercice 1</a>
+                    <a href="ex2.html">Exercice 2</a>
+                    <a href="cr.html">Compte-rendu</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="form_etudiant">
+
+            <h2>Base de données étudiant</h2>
+
+            <form id="pourBDetd" method="POST">
+                <select class="choix" name="requeteChoisie">
+                    <option name="texteRequete" value="SELECT * FROM vehicules ORDER BY id_vehicule"> Afficher l'ensemble du parc automobile.</option>
+                    <option name="texteRequete" value="SELECT * FROM vehicules ORDER BY marque_modele"> Afficher l'ensemble des véhicules par ordre de marque.</option>
+                    <option name="texteRequete" value="SELECT * FROM vehicules ORDER BY puissance"> Afficher les véhicules du moins au plus puissant.</option>
+                    <option name="texteRequete" value="SELECT * FROM vehicules ORDER BY puissance DESC"> Afficher les véhicules du plus au moins puissant.</option> 
+                    <option name="texteRequete" value="SELECT AVG (puissance) FROM vehicules"> Afficher la puissance moyenne de l'ensemble du parc automobile.</option>
+
+                    <option name="texteRequete" value=""> --------------------------------------------------------------------------------------------------</option>
+
+                    <option name="texteRequete" value="SELECT * FROM clients"> Afficher l'ensemble des clients.</option>
+                    <option name="texteRequete" value="SELECT * FROM clients ORDER BY nom"> Afficher les clients par ordre alphabétique.</option>
+                    <option name="texteRequete" value="SELECT DISTINCT nom FROM clients ORDER BY nom"> Afficher les différents noms sans doublons par ordre alphabétique.</option>
+                    <option name="texteRequete" value="SELECT DISTINCT departement FROM clients ORDER BY departement"> Afficher les différents départements sans doublons par ordre croissant.</option> 
+                    <option name="texteRequete" value="SELECT * FROM clients WHERE nom LIKE 'L%'">Afficher les noms qui commencent par L.</option>
+
+                    <option name="texteRequete" value=""> --------------------------------------------------------------------------------------------------</option>
+                    
+                    <option name="texteRequete" value="SELECT * FROM locations"> Afficher l'ensemble des locations.</option>
+                    <option name="texteRequete" value="SELECT DISTINCT agence FROM locations ORDER BY agence"> Afficher les différentes agences de location par ordre alphabétique.</option>
+                    <option name="texteRequete" value="SELECT DISTINCT duree FROM locations ORDER BY duree"> Afficher les différentes durées de location (en jours) par ordre croissant.</option>
+                    <option name="texteRequete" value="SELECT AVG (duree) FROM locations"> Afficher la durée moyenne de location (en jours).</option>
+                </select>
+
+                <div>
+                <input class="button" type="submit" value="Afficher">
+                </div>
+
+            </form>
+
+            <h3>Affichage des résultats</h3>
+
+            <div class="sortieBD">
+                <table></table>
+            </div>
+
+            <div class ="messageErreur">
+                <p></p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Clément TUTIN - Licence informatique</p>
+            <a href="https://www.univ-larochelle.fr/" style="color:white">La Rochelle Université</a>
+            <p>2020 - 2021</p>
+        </footer>
+        
+    </body>
+</html>
